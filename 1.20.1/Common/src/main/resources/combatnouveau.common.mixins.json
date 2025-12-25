@@ -9,8 +9,6 @@
     "DiggerItemMixin",
     "EntityMixin",
     "FoodDataMixin",
-    "LivingEntityMixin",
-    "PlayerMixin",
     "ProjectileUtilMixin",
     "SweepingEdgeEnchantmentMixin",
     "accessor.ItemAccessor",
