@@ -1,45 +1,40 @@
 {
   "schemaVersion": 1,
-  "id": "${modId}",
-  "version": "${modVersion}",
-
-  "name": "${modName}",
-  "description": "${modDescription}",
-
+  "id": "combatnouveau",
+  "version": "8.0.5-modified",
+  "name": "Combat Nouveau Modified",
+  "description": "Modified build: shield-related mixin disabled for Armour Reimagined compatibility. No other behavior changed.",
   "authors": [
-    "${modAuthor}"
+    "Fuzs"
   ],
-  
   "contact": {
-    "homepage": "${modPageUrl}",
-    "issues": "${modIssueUrl}",
-    "sources": "${modPageUrl}"
+    "sources": "https://github.com/NotEvenBelow/combatnouveau-shieldremove"
   },
-
-  "license": "${modLicense}",
+  "license": "MPL-2.0",
   "icon": "mod_logo.png",
-
-  "environment": "${modFabricEnvironment}",
-
+  "environment": "*",
   "entrypoints": {
     "main": [
-      "${mainEntryPoint}"
+      "fuzs.combatnouveau.CombatNouveauFabric"
     ],
     "client": [
-      "${clientEntryPoint}"
+      "fuzs.combatnouveau.client.CombatNouveauFabricClient"
     ]
   },
-
   "mixins": [
-    "${modId}.common.mixins.json"
+    "combatnouveau.common.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=${minFabricVersion}",
-    "fabric-api": ">=${minFabricApiVersion}",
-    "puzzleslib": ">=${minPuzzlesVersion}",
+    "fabricloader": "\u003e\u003d0.14.21",
+    "fabric-api": "\u003e\u003d0.86.0",
+    "puzzleslib": "\u003e\u003d8.1.13",
     "reach-entity-attributes": "*",
-    "minecraft": "${minecraftVersion}",
-    "java": ">=17"
-  }
+    "minecraft": "1.20.1",
+    "java": "\u003e\u003d17"
+  },
+  "jars": [
+    {
+      "file": "META-INF/jars/reach-entity-attributes-2.4.0.jar"
+    }
+  ]
 }
